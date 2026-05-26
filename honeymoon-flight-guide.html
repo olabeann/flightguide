@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✈️ 신혼부부 필독: 항공권 반값 졸업 가이드</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --bg-white: #ffffff;
+    --bg-card: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --accent-hover: #1d4ed8;
+    --border: #e5e7eb;
+    --border-light: #f3f4f6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --ig-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── 인스타그램 배너 ── */
+  .ig-banner {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+  .ig-banner-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .ig-banner-text {
+    font-size: clamp(13px, 3.2vw, 15px);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .ig-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--ig-gradient);
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+    font-size: clamp(13px, 3vw, 14px);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    white-space: nowrap;
+    min-height: 44px;
+  }
+  .ig-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+  .ig-btn svg { flex-shrink: 0; }
+
+  /* ── 히어로 ── */
+  .hero {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 40%, #f0fdf4 100%);
+    border-bottom: 1px solid var(--border);
+    padding: clamp(36px, 8vw, 72px) 20px clamp(28px, 6vw, 56px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-emoji { font-size: clamp(36px, 8vw, 56px); display: block; margin-bottom: 12px; line-height: 1; }
+  .hero h1 {
+    font-size: clamp(22px, 5.5vw, 38px);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    font-size: clamp(14px, 3.2vw, 17px);
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 28px;
+  }
+
+  /* ── 히어로 카드 그리드 ── */
+  .hero-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  @media (min-width: 560px) {
+    .hero-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 760px) {
+    .hero-cards { grid-template-columns: repeat(4, 1fr); }
+  }
+  .hero-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .hero-card-icon { font-size: 26px; margin-bottom: 6px; }
+  .hero-card-title { font-size: clamp(12px, 2.8vw, 13px); font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+  .hero-card-desc { font-size: clamp(11px, 2.5vw, 12px); color: var(--text-secondary); }
+
+  /* ── 컨테이너 ── */
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ── 섹션 ── */
+  .section {
+    padding: clamp(32px, 6vw, 56px) 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(18px, 4.5vw, 26px);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .section-desc {
+    font-size: clamp(13px, 3vw, 15px);
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  /* ── 카드 ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(16px, 4vw, 24px);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .card-title {
+    font-size: clamp(14px, 3.5vw, 17px);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title a { color: var(--accent); text-decoration: none; }
+  .card-title a:hover { text-decoration: underline; }
+  .card-body { font-size: clamp(13px, 3vw, 14px); color: var(--text-secondary); line-height: 1.75; }
+  .card-tag {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 50px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .warning-card {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin-top: 12px;
+    font-size: clamp(12px, 2.8vw, 13px);
+    color: #92400e;
+    line-height: 1.7;
+  }
+  .warning-card strong { color: #b45309; }
+
+  /* ── 사이트 그리드 ── */
+  .sites-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 480px) { .sites-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ── 오픈조 테이블 ── */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-top: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(12px, 2.8vw, 14px);
+    min-width: 500px;
+  }
+  thead { background: #f1f5f9; }
+  th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+    font-size: clamp(11px, 2.5vw, 13px);
+  }
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg); }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--accent-light);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  /* ── 오픈조 지역 탭 ── */
+  .region-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .tab-btn {
+    background: var(--bg-white);
+    border: 1.5px solid var(--border);
+    color: var(--text-secondary);
+    font-family: 'Pretendard', sans-serif;
+    font-size: clamp(12px, 2.8vw, 14px);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.18s;
+    min-height: 40px;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── 여행지 카드 ── */
+  .dest-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 540px) { .dest-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 760px) { .dest-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .dest-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .dest-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .dest-emoji { font-size: 28px; margin-bottom: 10px; }
+  .dest-name { font-size: clamp(15px, 3.5vw, 17px); font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+  .dest-timing {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  .dest-tip { font-size: clamp(12px, 2.8vw, 13px); color: var(--text-secondary); line-height: 1.7; }
+
+  /* ── 특수 상황 카드 ── */
+  .alert-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 540px) { .alert-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .alert-card {
+    background: var(--bg-white);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 16px 18px;
+    box-shadow: var(--shadow-sm);
+  }
+  .alert-card.warning { border-left-color: #f59e0b; }
+  .alert-card.danger { border-left-color: #ef4444; }
+  .alert-card.success { border-left-color: #10b981; }
+  .alert-card-icon { font-size: 20px; margin-bottom: 6px; }
+  .alert-card-title { font-size: clamp(13px, 3vw, 14px); font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+  .alert-card-desc { font-size: clamp(12px, 2.8vw, 13px); color: var(--text-secondary); line-height: 1.7; }
+
+  /* ── 체크리스트 ── */
+  .checklist-group { margin-bottom: 24px; }
+  .checklist-group-title {
+    font-size: clamp(14px, 3.2vw, 16px);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 6px;
+    padding-left: 4px;
+    min-height: 44px;
+  }
+  .checklist-item:last-child { border-bottom: none; }
+  .checklist-item:hover { background: var(--bg); }
+  .checklist-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+  .checklist-item label {
+    font-size: clamp(13px, 3vw, 14px);
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1.65;
+  }
+  .checklist-item label strong { color: var(--text-primary); }
+  .checklist-item input:checked + label { text-decoration: line-through; color: var(--text-muted); }
+  .progress-bar-wrap {
+    background: var(--border);
+    border-radius: 50px;
+    height: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    background: var(--accent);
+    height: 100%;
+    border-radius: 50px;
+    transition: width 0.3s ease;
+    width: 0%;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  /* ── FAQ 아코디언 ── */
+  .faq-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .faq-item.open { box-shadow: var(--shadow-md); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 16px 18px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: clamp(13px, 3.2vw, 15px);
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 56px;
+    transition: background 0.15s;
+  }
+  .faq-q:hover { background: var(--bg); }
+  .faq-q .arrow {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background 0.2s;
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .faq-item.open .faq-q .arrow { transform: rotate(180deg); background: var(--accent); color: #fff; }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.2s;
+    padding: 0 18px;
+  }
+  .faq-a-inner {
+    font-size: clamp(13px, 3vw, 14px);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding-bottom: 16px;
+    border-top: 1px solid var(--border-light);
+    padding-top: 14px;
+  }
+  .faq-item.open .faq-a { max-height: 600px; }
+
+  /* ── 꿀팁 박스 ── */
+  .tip-box {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 1.5px solid #bfdbfe;
+    border-radius: var(--radius);
+    padding: clamp(20px, 5vw, 32px);
+    margin-top: 8px;
+  }
+  .tip-box-title {
+    font-size: clamp(15px, 3.5vw, 18px);
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tip-box p {
+    font-size: clamp(13px, 3vw, 14px);
+    color: #1e40af;
+    line-height: 1.8;
+  }
+
+  /* ── 링크 ── */
+  a { color: var(--accent); }
+  .link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1.5px solid var(--accent-light);
+    transition: border-color 0.15s;
+  }
+  .link-btn:hover { border-color: var(--accent); }
+
+  /* ── 구분선 ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
+  }
+
+  /* ── 푸터 ── */
+  footer {
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    padding: clamp(20px, 4vw, 36px) 20px;
+    text-align: center;
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 14px;
+  }
+
+  /* ── ul 스타일 ── */
+  .styled-ul {
+    list-style: none;
+    padding: 0;
+  }
+  .styled-ul li {
+    padding: 8px 0 8px 22px;
+    position: relative;
+    font-size: clamp(13px, 3vw, 14px);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .styled-ul li:last-child { border-bottom: none; }
+  .styled-ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .styled-ul li strong { color: var(--text-primary); }
+</style>
+</head>
+<body>
+
+<!-- ── 최상단 인스타그램 배너 ── -->
+<div class="ig-banner">
+  <div class="ig-banner-inner">
+    <span class="ig-banner-text">✨ 더 많은 꿀정보 얻고 싶다면?</span>
+    <a href="https://www.instagram.com/startup_tip_" target="_blank" rel="noopener" class="ig-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+      </svg>
+      인스타그램 팔로우
+    </a>
+  </div>
+</div>
+
+<!-- ── 히어로 섹션 ── -->
+<section class="hero">
+  <span class="hero-emoji">✈️</span>
+  <h1>신혼부부 필독<br><span>항공권 반값 졸업 가이드</span></h1>
+  <p class="hero-sub">조금만 전략적으로 움직이면 비즈니스 부럽지 않은 가성비 여행이 무조건 가능합니다 💡</p>
+  <div class="hero-cards">
+    <div class="hero-card">
+      <div class="hero-card-icon">🔍</div>
+      <div class="hero-card-title">비교 사이트 3대장</div>
+      <div class="hero-card-desc">스카이스캐너 · 구글플라이트 · 네이버</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-icon">💸</div>
+      <div class="hero-card-title">땡처리 여행사</div>
+      <div class="hero-card-desc">일정 자유롭다면 최대 반값</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-icon">🗺️</div>
+      <div class="hero-card-title">오픈조 전략</div>
+      <div class="hero-card-desc">인-아웃 다르게 = 10만원 절약</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-icon">📅</div>
+      <div class="hero-card-title">골든타임 예약</div>
+      <div class="hero-card-desc">여행지별 최적 예약 시점</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 메인 콘텐츠 ── -->
+<main>
+
+  <!-- 1. 비교 사이트 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">STEP 1</div>
+      <h2 class="section-title">어디서 찾나요? 비교 사이트 3대장 ✈️</h2>
+      <p class="section-desc">무조건 아래 3곳을 같은 일정으로 비교해봐야 최저가가 보여요!</p>
+      <div class="sites-grid">
+        <div class="card">
+          <div class="card-title">
+            🌐 <a href="https://www.skyscanner.co.kr/" target="_blank" rel="noopener">스카이스캐너</a>
+          </div>
+          <div class="card-body">
+            세계 노선 최다 보유! 가장 폭넓은 조합을 보여주지만, 결제 시 해외 사이트(OTA)로 연결될 수 있으니 <strong>후기를 꼭 확인</strong>하세요. 유럽 국가별 이동 시 특히 유용해요.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            🔎 <a href="https://www.google.com/travel/flights?hl=ko" target="_blank" rel="noopener">구글 플라이트</a>
+          </div>
+          <div class="card-body">
+            가장 빠르고 스마트해요! <strong>가격 변동 그래프</strong>와 '목적지 탐색' 기능이 정말 잘 되어 있어서 지금이 살 타이밍인지 바로 알려줘요.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            🇰🇷 <a href="https://flight.naver.com/" target="_blank" rel="noopener">네이버 항공권</a>
+          </div>
+          <div class="card-body">
+            한국인 맞춤 카드 할인! 삼성/국민/신한 등 카드사 결제 혜택이 좋을 때가 있어서, <strong>최종 결제액이 가장 쌀 때</strong>가 많아요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 땡처리 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">STEP 2</div>
+      <h2 class="section-title">일정이 자유롭다면? 땡처리 여행사 💫</h2>
+      <p class="section-desc">여행사가 미리 확보한 좌석 중 남은 자리를 헐값에 내놓는 보물창고예요!</p>
+      <div class="sites-grid">
+        <div class="card">
+          <div class="card-title">🎫 <a href="https://mm.ttang.com/ttangair/main.do" target="_blank" rel="noopener">땡처리닷컴</a></div>
+          <div class="card-body">국내 최대 항공권 특가 전문 사이트. 임박 출발 상품이 많아요.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">🌺 <a href="https://m.hanatour.com/trp/air/CHPC0AIR0233M100" target="_blank" rel="noopener">하나투어</a></div>
+          <div class="card-body">대형 여행사의 재고 항공권. 믿을 수 있는 AS와 함께.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">🗺️ <a href="https://www.modetour.com/" target="_blank" rel="noopener">모두투어</a></div>
+          <div class="card-body">다양한 노선의 할인 항공권. 아시아 노선에 강점.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">✈️ <a href="https://kr.trip.com/flights/?locale=ko-KR&curr=KRW" target="_blank" rel="noopener">트립닷컴</a></div>
+          <div class="card-body">글로벌 OTA. 특히 동남아, 중화권 노선 가격이 저렴할 때가 많아요.</div>
+        </div>
+      </div>
+      <div class="warning-card">
+        ⚠️ <strong>주의!</strong> 가격은 저렴하지만, 출발일이 임박하고 일정이 고정된 경우가 있어요. 특히 <strong>환불 규정이 매우 까다로우니</strong> 확정된 일정일 때만 결제하세요! 수수료가 엄청 붙을 수 있습니다.
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 오픈조 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">STEP 3</div>
+      <h2 class="section-title">인-아웃 다르게! '오픈조' 활용법 🛫</h2>
+      <p class="section-desc">단순히 도시만 바꾸는 게 아니라 전략이 필요해요. 유럽 갈 때 엄청 자주 사용한 방법이에요!</p>
+
+      <div class="card" style="margin-bottom:20px;">
+        <div class="card-title">💡 기본 원리</div>
+        <div class="card-body">
+          <code style="background:#f1f5f9;padding:3px 8px;border-radius:5px;font-size:13px;color:#2563eb;">[파리 IN - 바르셀로나 OUT]</code> 처럼 입/출국 도시를 다르게 설정(다구간 예약)하면, 첫 도시로 되돌아가는 기차/국내선 비용과 시간을 아낄 수 있어요!<br><br>
+          <strong>순서 뒤집기 꿀팁:</strong> '마드리드 IN - 바르셀로나 OUT'이 정석이라 비싸요. 반대로 '바르셀로나 IN - 마드리드 OUT'으로 뒤집으면 방향만 바꿔도 <strong>10만 원 이상 싸지는 경우</strong>가 허다해요!
+        </div>
+      </div>
+
+      <div class="region-tabs">
+        <button class="tab-btn active" onclick="switchTab(this, 'europe')">🇪🇺 유럽</button>
+        <button class="tab-btn" onclick="switchTab(this, 'asia')">🌏 동남아</button>
+        <button class="tab-btn" onclick="switchTab(this, 'america')">🌎 미주</button>
+        <button class="tab-btn" onclick="switchTab(this, 'all')">📋 전체 비교</button>
+      </div>
+
+      <div id="europe" class="tab-panel active">
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">유럽은 저가항공(LCC)과 기차망이 발달해 인-아웃을 다르게 잡는 것이 국룰! 특히 <strong>런던</strong>은 공항세가 비싸서 런던 인(IN) - 타 도시 아웃(OUT)이 공식입니다.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>추천 조합</th><th>특징 및 장점</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge">런던 IN → 파리 OUT</span></td><td>가장 클래식한 조합. 유로스타로 이동 가능. 파리 출국이 공항세 훨씬 저렴.</td></tr>
+              <tr><td><span class="badge">파리 IN → 로마 OUT</span></td><td>서유럽 핵심 코스. 로마는 한국행 직항·경유편이 많아 귀국행 선택폭이 넓음.</td></tr>
+              <tr><td><span class="badge">프라하 IN → 부다페스트 OUT</span></td><td>동유럽 가성비 조합. 야간열차·버스 저렴해 교통비 절감 극대화.</td></tr>
+              <tr><td><span class="badge">마드리드 IN → 바르셀로나 OUT</span></td><td>스페인 일주 시 필수. 두 도시 모두 대형 항공사가 취항해 가격 경쟁 치열.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="asia" class="tab-panel">
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">동남아는 인접 국가 간 이동 비용이 매우 저렴(에어아시아 등)해서, 한 나라만 보기보다 인근 국가를 묶는 것이 이득이에요!</p>
+        <ul class="styled-ul">
+          <li><strong>방콕 IN → 치앙마이 OUT (태국):</strong> 방콕 진입 후 북부로 이동, 치앙마이에서 바로 귀국하면 국내선 비용과 시간 절약!</li>
+          <li><strong>다낭 IN → 호치민 OUT (베트남):</strong> 베트남은 남북으로 긴 지형이라 한 방향으로 흐르는 것이 훨씬 효율적.</li>
+          <li><strong>쿠알라룸푸르 IN → 싱가포르 OUT:</strong> 버스·기차로 이동 쉽고, 싱가포르 아웃 시 외항사 프로모션이 많음.</li>
+        </ul>
+      </div>
+
+      <div id="america" class="tab-panel">
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">미주는 땅덩이가 넓어 인-아웃 설정이 곧 '시간 = 돈' 공식입니다.</p>
+        <ul class="styled-ul">
+          <li><strong>샌프란시스코 IN → LA OUT:</strong> 1번 국도 해안 드라이브 코스를 따라 내려오는 일정에 최적.</li>
+          <li><strong>뉴욕 IN → 워싱턴 D.C. OUT:</strong> 동부 도시 간 암트랙·버스로 이동이 쉬워 이동비 절감.</li>
+          <li><strong>도쿄 IN → 오사카 OUT (일본):</strong> 신칸센 비용(약 14만 원)을 고려하면 굳이 도쿄로 되돌아가지 않는 것이 무조건 이득!</li>
+        </ul>
+      </div>
+
+      <div id="all" class="tab-panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>지역</th><th>추천 조합</th><th>특징 및 장점</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge">유럽</span></td><td>런던 IN → 파리 OUT</td><td>런던은 공항세가 비싸서 '들어갈 때' 쓰는 게 이득.</td></tr>
+              <tr><td><span class="badge">유럽</span></td><td>파리 IN → 로마 OUT</td><td>서유럽 핵심 코스. 귀국행 선택폭 매우 넓음.</td></tr>
+              <tr><td><span class="badge">동남아</span></td><td>방콕 IN → 치앙마이 OUT</td><td>태국 국내선 비용·시간 절약, 북부까지 완벽 일주.</td></tr>
+              <tr><td><span class="badge">베트남</span></td><td>다낭 IN → 호치민 OUT</td><td>남북으로 긴 지형 특성상 한 방향 동선이 가장 효율적.</td></tr>
+              <tr><td><span class="badge">미주</span></td><td>SF IN → LA OUT</td><td>1번 국도 해안 드라이브 신혼여행 최적 루트.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tip-box" style="margin-top:20px;">
+        <div class="tip-box-title">💡 다구간 예약 시 꿀팁</div>
+        <p>① 편도+편도로 따로 끊는 것보다 항공사 웹사이트의 <strong>[다구간 예약]</strong> 옵션을 선택해야 왕복 할인이 적용돼요!<br>
+        ② 영국(런던) 같은 공항세 비싼 곳은 무조건 <strong>도착지(IN)</strong>로 잡으세요. 나갈 때(OUT) 세금이 붙어요!<br>
+        ③ 갈 때 국적기(대한항공/아시아나), 올 때 현지 저가항공을 섞는 '조합된 티켓' 기능을 활용해보세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 골든타임 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">STEP 4</div>
+      <h2 class="section-title">2026년 신혼여행지별 예약 골든타임 💖</h2>
+      <p class="section-desc">신혼여행 인기 TOP 5 + 지역별 최적 예약 시점</p>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <div class="dest-emoji">🏝️</div>
+          <div class="dest-name">몰디브</div>
+          <div class="dest-timing">⏰ 6개월 전 예약</div>
+          <div class="dest-tip">에미레이트/에티하드 경유 시 가격 40% 절감 + 두바이 스톱오버 가능! 5~10월 비수기를 狙.</div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-emoji">🌴</div>
+          <div class="dest-name">발리</div>
+          <div class="dest-timing">⏰ 4~5개월 전 예약</div>
+          <div class="dest-tip">7~8월은 전 세계인의 전쟁터! 2026년 5월 or 9월을 공략하면 풀빌라 1박 값을 항공권에서 아낄 수 있어요.</div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-emoji">🌊</div>
+          <div class="dest-name">칸쿤</div>
+          <div class="dest-timing">⏰ 7개월 전 예약</div>
+          <div class="dest-tip">미국 도시 경유 다구간권 필수. 2026 월드컵(6~7월) 영향으로 미국 경유 노선 폭등 주의! 11월이 가격 최저.</div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-emoji">🏔️</div>
+          <div class="dest-name">스위스/이탈리아</div>
+          <div class="dest-timing">⏰ 5~6개월 전 예약</div>
+          <div class="dest-tip">11~12월 초 '크리스마스 마켓' 직전이 유럽 항공권 최저가 시기. 융프라우 포함 시 6월 초 추천.</div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-emoji">🌺</div>
+          <div class="dest-name">모리셔스</div>
+          <div class="dest-timing">⏰ 6개월 전 예약</div>
+          <div class="dest-tip">두바이 경유 항공편이 가장 효율적. 에미레이트 항공 정기 세일(보통 1월/9월)을 노리세요!</div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-emoji">🗼</div>
+          <div class="dest-name">일본</div>
+          <div class="dest-timing">⏰ 90일 전 예약</div>
+          <div class="dest-tip">화/수요일 출발이 정답. 엔저 영향으로 얼리버드가 무조건 승리. 6월, 9월 추천.</div>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:20px;">
+        <table>
+          <thead>
+            <tr><th>여행지</th><th>예약 시점</th><th>추천 달</th><th>실전 꿀팁</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>몰디브</strong></td><td>6개월 전</td><td>5~10월</td><td>에미레이트/에티하드 경유 시 -40% & 두바이 스톱오버</td></tr>
+            <tr><td><strong>발리</strong></td><td>4~5개월 전</td><td>5월, 9월</td><td>7~8월 성수기는 피하기. 한 달만 비껴가도 풀빌라 1박 값 절약</td></tr>
+            <tr><td><strong>칸쿤</strong></td><td>7개월 전</td><td>11월</td><td>2026 월드컵(6~7월) 미국 경유 노선 폭등 주의!</td></tr>
+            <tr><td><strong>유럽</strong></td><td>5~6개월 전</td><td>6월, 11월</td><td>크리스마스 마켓 직전이 항공권 최저가</td></tr>
+            <tr><td><strong>일본</strong></td><td>90일 전</td><td>6월, 9월</td><td>화/수 출발, 엔저 시기 얼리버드 필수</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 특수 상황 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">STEP 5</div>
+      <h2 class="section-title">2026년 필수 체크! 특수 상황 🚨</h2>
+      <p class="section-desc">이것만 알아도 남들보다 한발 앞서 예약할 수 있어요.</p>
+      <div class="alert-grid">
+        <div class="alert-card">
+          <div class="alert-card-icon">📅</div>
+          <div class="alert-card-title">가장 싼 요일</div>
+          <div class="alert-card-desc">통계적으로 <strong>수요일 출발</strong>이 가장 저렴해요. 귀국편은 월/화요일로 잡으세요!</div>
+        </div>
+        <div class="alert-card success">
+          <div class="alert-card-icon">⏱️</div>
+          <div class="alert-card-title">LCC 90일의 법칙</div>
+          <div class="alert-card-desc">제주항공, 진에어 등은 <strong>90일 전 특가</strong>를 열어요. 1월/7월 메가 얼리버드를 놓치지 마세요!</div>
+        </div>
+        <div class="alert-card danger">
+          <div class="alert-card-icon">⚽</div>
+          <div class="alert-card-title">북중미 월드컵 주의</div>
+          <div class="alert-card-desc">6~7월 미국·캐나다·멕시코 노선 <strong>가격 폭등</strong>! 하와이/칸쿤은 이 시기 무조건 피하세요.</div>
+        </div>
+        <div class="alert-card warning">
+          <div class="alert-card-icon">✈️</div>
+          <div class="alert-card-title">마일리지의 배신</div>
+          <div class="alert-card-desc">초특가 티켓은 <strong>마일리지 적립률 0%</strong>인 경우가 많아요. 장거리는 몇만 원 더 보태서 적립률 100%를 구매하는 게 나중에 이득!</div>
+        </div>
+      </div>
+      <div class="tip-box" style="margin-top:20px;">
+        <div class="tip-box-title">💡 최종 꿀팁 ★★★</div>
+        <p>항공권을 다 골랐다면 결제 직전 <strong>해당 항공사 공식 홈페이지</strong>에 꼭 들어가 보세요. 공홈 전용 쿠폰이나 카드사 제휴 할인으로 <strong>2~3만 원 더 아낄 수도</strong> 있어요! 저는 모든 항공사를 다 검색해봅니다. 진짜 공홈이 더 저렴한 경우도 있습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 체크리스트 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">CHECKLIST</div>
+      <h2 class="section-title">항공권 결제 마스터 체크리스트 ✅</h2>
+      <p class="section-desc">결제 전 이 리스트를 하나씩 체크하세요!</p>
+
+      <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar"></div></div>
+      <div class="progress-text" id="progressText">0 / 12 완료</div>
+
+      <div class="checklist-group">
+        <div class="checklist-group-title">1️⃣ 여권 및 기본 정보 확인 (Pre-Check)</div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c1"><label for="c1"><strong>여권 만료일:</strong> 여행 귀국일 기준 최소 6개월 이상 남아있나요?</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c2"><label for="c2"><strong>영문 성함:</strong> 여권에 적힌 영문 철자와 100% 일치하는지? (띄어쓰기 주의!)</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c3"><label for="c3"><strong>비자 확인:</strong> 목적지 국가가 무비자인지, 비자가 필요한지 확인 (2026년 기준)</label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="checklist-group-title">2️⃣ 요금 및 수하물 조건 (Booking Detail)</div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c4"><label for="c4"><strong>위탁 수하물 포함 여부:</strong> 초특가 운임은 수하물이 '0kg'인 경우가 많습니다.</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c5"><label for="c5"><strong>경유 시간:</strong> 경유지가 있다면 환승 시간이 최소 2~3시간 이상인지?</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c6"><label for="c6"><strong>취소/변경 규정:</strong> 단순 변심 또는 일정 변경 시 수수료가 얼마인지 확인했나요?</label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="checklist-group-title">3️⃣ 결제 (Payment Tech)</div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c7"><label for="c7"><strong>결제 통화:</strong> 해외 사이트라면 '현지 통화' 또는 'USD'로 설정했나요? (이중 환전 방지)</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c8"><label for="c8"><strong>카드사 혜택:</strong> 해당 사이트에서 제공하는 특정 카드 할인 혜택을 적용했나요?</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c9"><label for="c9"><strong>공식 홈페이지 비교:</strong> 비교 사이트 확인 후 항공사 공홈 가격과 마지막으로 비교했나요?</label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="checklist-group-title">4️⃣ 마일리지 및 부가 서비스 (Final Touch)</div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c10"><label for="c10"><strong>마일리지 적립률:</strong> 내가 결제하는 클래스가 마일리지 적립 가능한 등급인지 확인 (0%인지)</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c11"><label for="c11"><strong>좌석 지정:</strong> 사전 좌석 지정이 무료인지, 유료라면 미리 할 것인지 결정했나요?</label>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox" id="c12"><label for="c12"><strong>기내식:</strong> 저가 항공사(LCC)의 경우 기내식이 미포함인 경우가 많습니다. 확인했나요?</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">자주 묻는 질문 ❓</h2>
+      <p class="section-desc">항공권 구매 전 이것만은 꼭 알아두세요!</p>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          스카이스캐너에서 찾은 가격으로 바로 결제해도 되나요?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">스카이스캐너는 비교 사이트이므로, 클릭하면 외부 OTA(온라인 여행사)로 연결됩니다. 결제 전 반드시 해당 OTA의 후기를 확인하고, 환불 정책도 꼭 읽어보세요. 가능하다면 항공사 공식 홈페이지와 가격을 비교해보는 것을 강력 추천합니다!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          오픈조(다구간) 예약과 편도+편도 예약의 차이는?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">편도+편도로 각각 끊으면 왕복 할인이 적용되지 않아 더 비쌀 수 있어요. 항공사 또는 OTA 사이트의 '다구간 예약' 기능을 이용하면 같은 루트라도 더 저렴하게 구매할 수 있습니다. 또한, 다구간 예약 시 수하물 정책도 한 번에 적용되어 편리합니다.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          땡처리 항공권은 정말 안전한가요?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">하나투어, 모두투어 같은 대형 여행사의 땡처리는 비교적 안전합니다. 다만 어떤 사이트든 환불 규정을 반드시 확인하세요. 대부분의 땡처리 항공권은 취소/변경 수수료가 매우 높거나 환불 불가인 경우가 많습니다. 일정이 100% 확정된 경우에만 결제하는 것이 원칙이에요!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          마일리지 적립이 안 되는 초특가 티켓, 사는 게 맞나요?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">단거리(일본, 동남아 등)는 마일리지 가치가 크지 않아 초특가를 사는 게 유리할 수 있어요. 반면 장거리(유럽, 미주, 몰디브 등)는 마일리지 가치가 크기 때문에 몇만 원 더 보태서 적립률 100% 티켓을 사는 것이 장기적으로 훨씬 이득입니다. 마일리지 누적으로 제주도 왕복권 정도는 충분히 건질 수 있어요!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          2026 월드컵 기간 항공권은 어떻게 해야 하나요?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">2026 북중미 월드컵(6~7월)으로 인해 미국, 캐나다, 멕시코 경유 노선은 가격이 크게 올라요. 이 기간에 칸쿤, 하와이, 미국 여행을 계획 중이라면 최소 7~8개월 전에 예약하거나, 아예 5월 이전 또는 8월 이후로 일정을 옮기는 것을 강력 추천합니다!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          어느 요일에 예약하고, 어느 요일에 출발하면 가장 저렴한가요?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">일반적으로 화요일~수요일에 예약하고, 수요일~목요일 출발 항공편이 통계적으로 가장 저렴합니다. 금요일 출발과 일요일 귀국은 가장 비싼 조합이에요. 귀국편은 월요일 또는 화요일로 잡으면 저렴한 경우가 많습니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── 최하단 인스타그램 배너 ── -->
+<footer>
+  <div class="ig-banner-inner" style="justify-content:center;flex-direction:column;text-align:center;gap:14px;padding:28px 20px;">
+    <span class="ig-banner-text" style="font-size:clamp(15px,3.8vw,18px);">✨ 더 많은 꿀정보 얻고 싶다면?</span>
+    <a href="https://www.instagram.com/startup_tip_" target="_blank" rel="noopener" class="ig-btn" style="font-size:15px;padding:13px 28px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+      </svg>
+      @startup_tip_ 팔로우하기
+    </a>
+  </div>
+  <div class="footer-copy">✈️ 항공권 반값 졸업 가이드 · 더 많은 꿀정보는 인스타그램에서!</div>
+</footer>
+
+<script>
+  // 탭 전환
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // FAQ 아코디언
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // 체크리스트
+  function toggleCheck(row) {
+    const cb = row.querySelector('input[type="checkbox"]');
+    cb.checked = !cb.checked;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = document.querySelectorAll('.checklist-item input').length;
+    const checked = document.querySelectorAll('.checklist-item input:checked').length;
+    const pct = Math.round((checked / total) * 100);
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `${checked} / ${total} 완료 (${pct}%)`;
+  }
+
+  // 체크박스 클릭이 두 번 토글되는 것 방지
+  document.querySelectorAll('.checklist-item input').forEach(cb => {
+    cb.addEventListener('click', e => {
+      e.stopPropagation();
+      updateProgress();
+    });
+  });
+</script>
+</body>
+</html>
