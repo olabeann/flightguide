@@ -138,6 +138,10 @@
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
   }
   .hero-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
   .hero-card-icon { font-size: 26px; margin-bottom: 6px; }
@@ -250,7 +254,6 @@
     width: 100%;
     border-collapse: collapse;
     font-size: clamp(12px, 2.8vw, 14px);
-    min-width: 500px;
   }
   thead { background: #f1f5f9; }
   th {
@@ -258,7 +261,6 @@
     text-align: left;
     font-weight: 700;
     color: var(--text-primary);
-    white-space: nowrap;
     border-bottom: 1px solid var(--border);
     font-size: clamp(11px, 2.5vw, 13px);
   }
@@ -568,6 +570,100 @@
     font-weight: 700;
   }
   .styled-ul li strong { color: var(--text-primary); }
+
+  /* ── 루트 카드 (STEP3 탭 통일) ── */
+  .route-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 540px) { .route-cards { grid-template-columns: repeat(2, 1fr); } }
+  .route-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s;
+  }
+  .route-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .route-region-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  .route-badge {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: clamp(12px, 2.8vw, 13px);
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+  .route-desc {
+    font-size: clamp(12px, 2.8vw, 13px);
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ── 골든타임 리스트 (STEP4 표 대체) ── */
+  .golden-list {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+  }
+  .golden-row {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border-light);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .golden-row:last-child { border-bottom: none; }
+  .golden-row:hover { background: var(--bg); }
+  .golden-dest {
+    font-size: clamp(14px, 3.2vw, 16px);
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+  .golden-info {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .golden-time {
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+  .golden-month {
+    background: var(--border-light);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+  .golden-tip {
+    font-size: clamp(12px, 2.8vw, 13px);
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
 </style>
 </head>
 <body>
@@ -593,26 +689,26 @@
   <h1>신혼부부 필독<br><span>항공권 반값 졸업 가이드</span></h1>
   <p class="hero-sub">조금만 전략적으로 움직이면 비즈니스 부럽지 않은 가성비 여행이 무조건 가능합니다 💡</p>
   <div class="hero-cards">
-    <div class="hero-card">
+    <a href="#sec-step1" class="hero-card">
       <div class="hero-card-icon">🔍</div>
       <div class="hero-card-title">비교 사이트 3대장</div>
       <div class="hero-card-desc">스카이스캐너 · 구글플라이트 · 네이버</div>
-    </div>
-    <div class="hero-card">
+    </a>
+    <a href="#sec-step2" class="hero-card">
       <div class="hero-card-icon">💸</div>
       <div class="hero-card-title">땡처리 여행사</div>
       <div class="hero-card-desc">일정 자유롭다면 최대 반값</div>
-    </div>
-    <div class="hero-card">
+    </a>
+    <a href="#sec-step3" class="hero-card">
       <div class="hero-card-icon">🗺️</div>
       <div class="hero-card-title">오픈조 전략</div>
       <div class="hero-card-desc">인-아웃 다르게 = 10만원 절약</div>
-    </div>
-    <div class="hero-card">
+    </a>
+    <a href="#sec-step4" class="hero-card">
       <div class="hero-card-icon">📅</div>
       <div class="hero-card-title">골든타임 예약</div>
       <div class="hero-card-desc">여행지별 최적 예약 시점</div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -620,7 +716,7 @@
 <main>
 
   <!-- 1. 비교 사이트 -->
-  <section class="section">
+  <section class="section" id="sec-step1">
     <div class="container">
       <div class="section-label">STEP 1</div>
       <h2 class="section-title">어디서 찾나요? 비교 사이트 3대장 ✈️</h2>
@@ -655,7 +751,7 @@
   </section>
 
   <!-- 2. 땡처리 -->
-  <section class="section">
+  <section class="section" id="sec-step2">
     <div class="container">
       <div class="section-label">STEP 2</div>
       <h2 class="section-title">일정이 자유롭다면? 땡처리 여행사 💫</h2>
@@ -685,7 +781,7 @@
   </section>
 
   <!-- 3. 오픈조 -->
-  <section class="section">
+  <section class="section" id="sec-step3">
     <div class="container">
       <div class="section-label">STEP 3</div>
       <h2 class="section-title">인-아웃 다르게! '오픈조' 활용법 🛫</h2>
@@ -707,54 +803,91 @@
       </div>
 
       <div id="europe" class="tab-panel active">
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">유럽은 저가항공(LCC)과 기차망이 발달해 인-아웃을 다르게 잡는 것이 국룰! 특히 <strong>런던</strong>은 공항세가 비싸서 런던 인(IN) - 타 도시 아웃(OUT)이 공식입니다.</p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>추천 조합</th><th>특징 및 장점</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><span class="badge">런던 IN → 파리 OUT</span></td><td>가장 클래식한 조합. 유로스타로 이동 가능. 파리 출국이 공항세 훨씬 저렴.</td></tr>
-              <tr><td><span class="badge">파리 IN → 로마 OUT</span></td><td>서유럽 핵심 코스. 로마는 한국행 직항·경유편이 많아 귀국행 선택폭이 넓음.</td></tr>
-              <tr><td><span class="badge">프라하 IN → 부다페스트 OUT</span></td><td>동유럽 가성비 조합. 야간열차·버스 저렴해 교통비 절감 극대화.</td></tr>
-              <tr><td><span class="badge">마드리드 IN → 바르셀로나 OUT</span></td><td>스페인 일주 시 필수. 두 도시 모두 대형 항공사가 취항해 가격 경쟁 치열.</td></tr>
-            </tbody>
-          </table>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;">유럽은 저가항공(LCC)과 기차망이 발달해 인-아웃을 다르게 잡는 것이 국룰! 특히 <strong>런던</strong>은 공항세가 비싸서 런던 인(IN) - 타 도시 아웃(OUT)이 공식입니다.</p>
+        <div class="route-cards">
+          <div class="route-card">
+            <div class="route-badge">런던 IN → 파리 OUT</div>
+            <div class="route-desc">가장 클래식한 조합. 유로스타로 이동 가능. 파리 출국이 공항세 훨씬 저렴.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">파리 IN → 로마 OUT</div>
+            <div class="route-desc">서유럽 핵심 코스. 로마는 한국행 직항·경유편이 많아 귀국행 선택폭이 넓음.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">프라하 IN → 부다페스트 OUT</div>
+            <div class="route-desc">동유럽 가성비 조합. 야간열차·버스 저렴해 교통비 절감 극대화.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">마드리드 IN → 바르셀로나 OUT</div>
+            <div class="route-desc">스페인 일주 시 필수. 두 도시 모두 대형 항공사가 취항해 가격 경쟁 치열.</div>
+          </div>
         </div>
       </div>
 
       <div id="asia" class="tab-panel">
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">동남아는 인접 국가 간 이동 비용이 매우 저렴(에어아시아 등)해서, 한 나라만 보기보다 인근 국가를 묶는 것이 이득이에요!</p>
-        <ul class="styled-ul">
-          <li><strong>방콕 IN → 치앙마이 OUT (태국):</strong> 방콕 진입 후 북부로 이동, 치앙마이에서 바로 귀국하면 국내선 비용과 시간 절약!</li>
-          <li><strong>다낭 IN → 호치민 OUT (베트남):</strong> 베트남은 남북으로 긴 지형이라 한 방향으로 흐르는 것이 훨씬 효율적.</li>
-          <li><strong>쿠알라룸푸르 IN → 싱가포르 OUT:</strong> 버스·기차로 이동 쉽고, 싱가포르 아웃 시 외항사 프로모션이 많음.</li>
-        </ul>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;">동남아는 인접 국가 간 이동 비용이 매우 저렴(에어아시아 등)해서, 한 나라만 보기보다 인근 국가를 묶는 것이 이득이에요!</p>
+        <div class="route-cards">
+          <div class="route-card">
+            <div class="route-badge">방콕 IN → 치앙마이 OUT (태국)</div>
+            <div class="route-desc">방콕 진입 후 북부로 이동, 치앙마이에서 바로 귀국하면 국내선 비용과 시간 절약!</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">다낭 IN → 호치민 OUT (베트남)</div>
+            <div class="route-desc">베트남은 남북으로 긴 지형이라 한 방향으로 흐르는 것이 훨씬 효율적.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">쿠알라룸푸르 IN → 싱가포르 OUT</div>
+            <div class="route-desc">버스·기차로 이동이 쉽고, 싱가포르 아웃 시 외항사 프로모션이 많음.</div>
+          </div>
+        </div>
       </div>
 
       <div id="america" class="tab-panel">
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">미주는 땅덩이가 넓어 인-아웃 설정이 곧 '시간 = 돈' 공식입니다.</p>
-        <ul class="styled-ul">
-          <li><strong>샌프란시스코 IN → LA OUT:</strong> 1번 국도 해안 드라이브 코스를 따라 내려오는 일정에 최적.</li>
-          <li><strong>뉴욕 IN → 워싱턴 D.C. OUT:</strong> 동부 도시 간 암트랙·버스로 이동이 쉬워 이동비 절감.</li>
-          <li><strong>도쿄 IN → 오사카 OUT (일본):</strong> 신칸센 비용(약 14만 원)을 고려하면 굳이 도쿄로 되돌아가지 않는 것이 무조건 이득!</li>
-        </ul>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;">미주는 땅덩이가 넓어 인-아웃 설정이 곧 '시간 = 돈' 공식입니다.</p>
+        <div class="route-cards">
+          <div class="route-card">
+            <div class="route-badge">샌프란시스코 IN → LA OUT</div>
+            <div class="route-desc">1번 국도 해안 드라이브 코스를 따라 내려오는 일정에 최적.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">뉴욕 IN → 워싱턴 D.C. OUT</div>
+            <div class="route-desc">동부 도시 간 암트랙·버스로 이동이 쉬워 이동비 절감.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-badge">도쿄 IN → 오사카 OUT (일본)</div>
+            <div class="route-desc">신칸센 비용(약 14만 원)을 고려하면 굳이 도쿄로 되돌아가지 않는 것이 무조건 이득!</div>
+          </div>
+        </div>
       </div>
 
       <div id="all" class="tab-panel">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>지역</th><th>추천 조합</th><th>특징 및 장점</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><span class="badge">유럽</span></td><td>런던 IN → 파리 OUT</td><td>런던은 공항세가 비싸서 '들어갈 때' 쓰는 게 이득.</td></tr>
-              <tr><td><span class="badge">유럽</span></td><td>파리 IN → 로마 OUT</td><td>서유럽 핵심 코스. 귀국행 선택폭 매우 넓음.</td></tr>
-              <tr><td><span class="badge">동남아</span></td><td>방콕 IN → 치앙마이 OUT</td><td>태국 국내선 비용·시간 절약, 북부까지 완벽 일주.</td></tr>
-              <tr><td><span class="badge">베트남</span></td><td>다낭 IN → 호치민 OUT</td><td>남북으로 긴 지형 특성상 한 방향 동선이 가장 효율적.</td></tr>
-              <tr><td><span class="badge">미주</span></td><td>SF IN → LA OUT</td><td>1번 국도 해안 드라이브 신혼여행 최적 루트.</td></tr>
-            </tbody>
-          </table>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;">지역별 추천 조합을 한눈에 비교해보세요!</p>
+        <div class="route-cards">
+          <div class="route-card">
+            <div class="route-region-tag">🇪🇺 유럽</div>
+            <div class="route-badge">런던 IN → 파리 OUT</div>
+            <div class="route-desc">런던은 공항세가 비싸서 '들어갈 때' 쓰는 게 이득.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-region-tag">🇪🇺 유럽</div>
+            <div class="route-badge">파리 IN → 로마 OUT</div>
+            <div class="route-desc">서유럽 핵심 코스. 귀국행 항공편 선택폭 매우 넓음.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-region-tag">🌏 동남아</div>
+            <div class="route-badge">방콕 IN → 치앙마이 OUT</div>
+            <div class="route-desc">태국 국내선 비용·시간 절약, 북부까지 완벽 일주.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-region-tag">🇻🇳 베트남</div>
+            <div class="route-badge">다낭 IN → 호치민 OUT</div>
+            <div class="route-desc">남북으로 긴 지형 특성상 한 방향 동선이 가장 효율적.</div>
+          </div>
+          <div class="route-card">
+            <div class="route-region-tag">🌎 미주</div>
+            <div class="route-badge">SF IN → LA OUT</div>
+            <div class="route-desc">1번 국도 해안 드라이브 신혼여행 최적 루트.</div>
+          </div>
         </div>
       </div>
 
@@ -768,7 +901,7 @@
   </section>
 
   <!-- 4. 골든타임 -->
-  <section class="section">
+  <section class="section" id="sec-step4">
     <div class="container">
       <div class="section-label">STEP 4</div>
       <h2 class="section-title">2026년 신혼여행지별 예약 골든타임 💖</h2>
@@ -812,19 +945,47 @@
         </div>
       </div>
 
-      <div class="table-wrap" style="margin-top:20px;">
-        <table>
-          <thead>
-            <tr><th>여행지</th><th>예약 시점</th><th>추천 달</th><th>실전 꿀팁</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>몰디브</strong></td><td>6개월 전</td><td>5~10월</td><td>에미레이트/에티하드 경유 시 -40% & 두바이 스톱오버</td></tr>
-            <tr><td><strong>발리</strong></td><td>4~5개월 전</td><td>5월, 9월</td><td>7~8월 성수기는 피하기. 한 달만 비껴가도 풀빌라 1박 값 절약</td></tr>
-            <tr><td><strong>칸쿤</strong></td><td>7개월 전</td><td>11월</td><td>2026 월드컵(6~7월) 미국 경유 노선 폭등 주의!</td></tr>
-            <tr><td><strong>유럽</strong></td><td>5~6개월 전</td><td>6월, 11월</td><td>크리스마스 마켓 직전이 항공권 최저가</td></tr>
-            <tr><td><strong>일본</strong></td><td>90일 전</td><td>6월, 9월</td><td>화/수 출발, 엔저 시기 얼리버드 필수</td></tr>
-          </tbody>
-        </table>
+      <div class="golden-list" style="margin-top:20px;">
+        <div class="golden-row">
+          <div class="golden-dest">🏝️ 몰디브</div>
+          <div class="golden-info">
+            <span class="golden-time">6개월 전</span>
+            <span class="golden-month">5~10월 추천</span>
+          </div>
+          <div class="golden-tip">에미레이트/에티하드 경유 시 -40% & 두바이 스톱오버</div>
+        </div>
+        <div class="golden-row">
+          <div class="golden-dest">🌴 발리</div>
+          <div class="golden-info">
+            <span class="golden-time">4~5개월 전</span>
+            <span class="golden-month">5월, 9월 추천</span>
+          </div>
+          <div class="golden-tip">7~8월 성수기는 피하기. 한 달만 비껴가도 풀빌라 1박 값 절약</div>
+        </div>
+        <div class="golden-row">
+          <div class="golden-dest">🌊 칸쿤</div>
+          <div class="golden-info">
+            <span class="golden-time">7개월 전</span>
+            <span class="golden-month">11월 추천</span>
+          </div>
+          <div class="golden-tip">2026 월드컵(6~7월) 미국 경유 노선 폭등 주의!</div>
+        </div>
+        <div class="golden-row">
+          <div class="golden-dest">🏔️ 유럽</div>
+          <div class="golden-info">
+            <span class="golden-time">5~6개월 전</span>
+            <span class="golden-month">6월, 11월 추천</span>
+          </div>
+          <div class="golden-tip">크리스마스 마켓 직전이 항공권 최저가</div>
+        </div>
+        <div class="golden-row">
+          <div class="golden-dest">🗼 일본</div>
+          <div class="golden-info">
+            <span class="golden-time">90일 전</span>
+            <span class="golden-month">6월, 9월 추천</span>
+          </div>
+          <div class="golden-tip">화/수 출발, 엔저 시기 얼리버드 필수</div>
+        </div>
       </div>
     </div>
   </section>
